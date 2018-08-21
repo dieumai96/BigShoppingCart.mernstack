@@ -11,41 +11,41 @@ module.exports = function validateRegisterInput(data) {
   data.password2 = !isEmpty(data.password2) ? data.password2 : '';
 
   if (!Validator.isLength(data.firstname, { min: 2, max: 30 })) {
-    errors.firstname = 'firstname must be between 2 and 30 characters';
+    errors.firstname = 'Họ phải lớn hơn 2 hoặc nhỏ hơn 30 ký tự';
   }
 
   if (Validator.isEmpty(data.firstname)) {
-    errors.firstname = 'firstname field is required';
+    errors.firstname = 'Họ không được bỏ trống';
   }
   if (!Validator.isLength(data.lastname, { min: 2, max: 30 })) {
-    errors.lastname = 'lastname must be between 2 and 30 characters';
+    errors.lastname = 'Tên phải lớn hơn 2 hoặc nhỏ hơn 30 ký tự';
   }
 
   if (Validator.isEmpty(data.lastname)) {
-    errors.lastname = 'lastname field is required';
+    errors.lastname = 'Tên không được bỏ trống';
   }
   if (Validator.isEmpty(data.email)) {
-    errors.email = 'Email field is required';
+    errors.email = 'Email không được bỏ trống';
   }
 
   if (!Validator.isEmail(data.email)) {
-    errors.email = 'Email is invalid';
+    errors.email = 'Email không đúng định dạng';
   }
 
   if (Validator.isEmpty(data.password)) {
-    errors.password = 'Password field is required';
+    errors.password = 'Mật khẩu không được bỏ trống';
   }
 
   if (!Validator.isLength(data.password, { min: 6, max: 30 })) {
-    errors.password = 'Password must be at least 6 characters';
+    errors.password = 'Mật khẩu phải lớn hơn 6 ký tự';
   }
 
   if (Validator.isEmpty(data.password2)) {
-    errors.password2 = 'Confirm Password field is required';
+    errors.password2 = 'Xác nhận mật khẩu không được bỏ trống';
   }
 
   if (!Validator.equals(data.password, data.password2)) {
-    errors.password2 = 'Passwords must match';
+    errors.password2 = 'Mật khẩu xác nhận không chính xác';
   }
 
   return {

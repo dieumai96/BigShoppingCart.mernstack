@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const passport = require('passport');
 const app = express();
 const adminRoutes = require('./routes/admin');
+const portRoutes = require('./routes/port');
 // monggo config 
 
 mongoose.connect(keys.mongoURI)
@@ -25,6 +26,8 @@ app.use(passport.initialize());
 require('./config/passport')(passport);
 
 app.use('/api/admin',adminRoutes);
+app.use('/api/port',portRoutes);
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT,()=>{
   console.log(`Server in running in port ${PORT}`);

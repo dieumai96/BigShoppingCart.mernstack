@@ -28,6 +28,7 @@ body {
 
 }
 
+  
 h1,h2,h3,h4,h5{
 
     font-weight: 300;
@@ -168,7 +169,7 @@ table tr th { color: #688a7e;}
 
 .login-img3-body{
 
-  background: url('../img/bg-1.jpg') no-repeat center center fixed;
+  /* background: url('../img/bg-1.jpg') no-repeat center center fixed;  */
 
   -webkit-background-size: cover;
 

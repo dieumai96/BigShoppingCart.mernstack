@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700');
+@import url('https://fonts.googleapis.com/css?family=Varela+Round&subset=hebrew,latin-ext,vietnamese');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
+h1{  
+  font-family: 'Montserrat', sans-serif;
+  /* padding: 6px 0 6px 0; */
+  font-weight: 500;
+  margin: 0px;
+  font-size: 26px;
+  color: #000000;
+  line-height: 50px;
+}
+.panel-heading {
+  height: 50px;
+  
+}
+label {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2em;
+}
+.brand-logo{
+  float: right;
+  width: 40px;
+  height: 40px;
+  margin-top: 3px;
+ margin-bottom: 10px;
+}
+img {
+  transform:  rotate(270deg);
+}
+
+div.box{
+  width: 95%;
+  font-family: 'Varela Round', sans-serif;
+  height: auto;
+  text-align: justify;
+  padding: 20px;margin: 20px auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  overflow: scroll;
+  height: 500px;
+  transition: .5s;
+  transform: skewX(-2deg);
+
+}
+div.box:hover{
+  transform: scale(1.01);
+}
+.box p{
+  text-align: justify
+}
+.pull-right {
+  font-family: 'Indie Flower', cursive;
+  font-size: 20px;
+}
